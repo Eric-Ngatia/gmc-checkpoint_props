@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import Profil_component from './Profile/Profil_component';
+import {HandleClick} from './Profile/HandleClick';
+import Counter from './Profile/Counter'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profil_component
+        Nom="N'Gatia"
+        Prenom="Yao Eric Constant"
+        Profession="Etudiant"
+        Bio="On reste des êtres humians malgré tous! Personne n'a la droit de nous juger avant la fin parce que l'homme est capable du pire comme du meilleur jusqu'au bont.
+              Au fond ce n'est qu'au moment de disparaitre que se rend compte de qui on a ete, la fin donne un sens à tous ce qui a prédcédé"
+      />
+
+      <HandleClick/>
+      <Counter/>
     </div>
   );
 }
